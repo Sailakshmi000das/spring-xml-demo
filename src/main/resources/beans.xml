@@ -20,7 +20,11 @@
        <property name="actor" ref="actor"/>
     </bean>
 
-    <bean id="movie1" class="com.stackroute.domain.Movie">
+    <bean id="movie1" class="com.stackroute.domain.Movie"  scope="prototype">
+        <constructor-arg name="actor" ref="actor1"/>
+    </bean>
+
+    <bean name="MovieA,MovieB" class="com.stackroute.domain.Movie">
         <constructor-arg name="actor" ref="actor1"/>
     </bean>
 </beans>

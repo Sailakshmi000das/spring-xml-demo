@@ -34,8 +34,18 @@ public class Main {
         Movie movie3=(Movie)((DefaultListableBeanFactory)beanDefinitionRegistry).getBean("movie1");
         System.out.println("Actor information using application context:\n" +movie3);
 
+      //testing scope
+        ApplicationContext applicationContext1=new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie4=(Movie) applicationContext1.getBean("movie1");
+        Movie movie5=(Movie) applicationContext1.getBean("movie1");
+        System.out.println(movie4==movie5);
 
+        //using name instead of id in bean-
+        Movie movie6=(Movie) applicationContext1.getBean("MovieA");
+        System.out.println("movie actor details : \n" +movie6);
 
+        Movie movie7=(Movie) applicationContext1.getBean("MovieB");
+        System.out.println("movie actor details : \n" +movie7);
 
     }
 }

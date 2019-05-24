@@ -4,6 +4,7 @@ public class Movie {
 
    Actor actor;
 
+
     public Movie() {
         System.out.println("Constructor");
     }
@@ -26,4 +27,5 @@ public class Movie {
                 "actor=" + actor +
                 '}';
     }
+
 }
