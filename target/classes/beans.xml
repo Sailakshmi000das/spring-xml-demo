@@ -40,5 +40,8 @@
     <bean id="application3" class="com.stackroute.awareinterface.ResourceLoaderAwareDemo">
 
     </bean>
+    <bean id="beanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+
+    </bean>
 </beans>
 
