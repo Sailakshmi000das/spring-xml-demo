@@ -11,37 +11,19 @@
     </bean>
 
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-       <property name="actor" ref="actor"/>
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName">
+<!--       <property name="actor" ref="actor"/>-->
     </bean>
 
     <bean id="actor1" class="com.stackroute.domain.Actor">
-        <property name="name" value="vinay"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="27"/>
+        <constructor-arg name="name" value="vinay"/>
+        <constructor-arg name="gender" value="male"/>
+        <constructor-arg name="age" value="27"/>
     </bean>
 
     <bean id="movie1" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor1"/>
+        <!--       <property name="actor" ref="actor"/>-->
     </bean>
-
-    <bean id="application" class="com.stackroute.awareinterface.ApplicationContextAwareDemo">
-
-    </bean>
-
-    <bean id="application1" class="com.stackroute.awareinterface.BeanFactoryAwareDemo">
-
-    </bean>
-
-    <bean id="application2" class="com.stackroute.awareinterface.BeanNameAwareDemo">
-
-    </bean>
-
-    <bean id="application3" class="com.stackroute.awareinterface.ResourceLoaderAwareDemo">
-
-    </bean>
-    <bean id="beanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
-<bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 
 </beans>
 
